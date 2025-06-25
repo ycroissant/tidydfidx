@@ -106,7 +106,6 @@ president in power for the given year.
 data("munnell", package = "dfidx")
 munnell <- munnell %>% as_tibble
 ```
-
 The two indexes are `state` and `year` and both are nested in another
 variable: `state` in `region` and `year` in `president`.  A `dfidx`
 object is created with the `dfidx` function: the first argument should
@@ -144,7 +143,7 @@ index:
 
 ```{r }
 #| label: dfidx_integer
-munnell %>% dfidx(48)
+munnell %>% dfidx(48L)
 ```
 
 Then the two indexes are created with the default names `id1` and
@@ -154,7 +153,7 @@ the `levels` argument.
 
 ```{r }
 #| label: dfidx_integer_pretty
-munnell %>% dfidx(48, idnames = c("state", "year"), levels = 1970:1986)
+munnell %>% dfidx(48L, idnames = c("state", "year"), levels = 1970:1986)
 ```
 
 The `idx` argument can also be a character of length one or two. In
@@ -237,7 +236,6 @@ series (the default value being `"."`).
 
 ```{r}
 #| label: varying
-#| eval: false
 munnell_wide %>% dfidx(varying = 3:36, sep = "_")
 ```
 
@@ -245,7 +243,6 @@ Better results can be obtained using the `idx` and `idnames` previously describe
 
 ```{r}
 #| label: varying_pretty
-#| eval: false
 munnell_wide %>% dfidx(idx = c(region = "state"), varying = 3:36, 
                        sep = "_", idnames = c(NA, "year"))
 ```
@@ -561,5 +558,11 @@ mf_mn %>% model.matrix(rhs = 1) %>% print(n = 5)
 mf_mn %>% model.matrix(rhs = 2:3) %>% print(n = 5)
 ```
 
+
+
+```{r }
+#| include: false
+options(old_options)
+```
 
 # References
