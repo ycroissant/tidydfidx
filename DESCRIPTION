@@ -1,11 +1,11 @@
 Package: tidydfidx
 Version: 0.0-2
-Date: 2025-06-25
+Date: 2025-07-08
 Title: Indexed 'tibble' and Methods for 'dplyr'
 Authors@R: person("Yves", "Croissant", role = c("aut", "cre"), email = "yves.croissant@univ-reunion.fr")
 Depends: R (>= 3.5.0)
 Imports: dplyr, vctrs, pillar, Rdpack, dfidx
-Suggests: knitr, quarto
+Suggests: knitr, quarto, rmarkdown
 Description: Provides extended data frames, with a special data frame column which contains two indexes, with potentially a nesting structure, and support for tibbles and methods for 'dplyr'.
 License: GPL (>=2)
 URL: https://cran.r-project.org/package=tidydfidx
