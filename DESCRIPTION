@@ -1,6 +1,6 @@
 Package: tidydfidx
-Version: 0.0-2
-Date: 2025-07-08
+Version: 0.0-3
+Date: 2026-02-06
 Title: Indexed 'tibble' and Methods for 'dplyr'
 Authors@R: person("Yves", "Croissant", role = c("aut", "cre"), email = "yves.croissant@univ-reunion.fr")
 Depends: R (>= 3.5.0)
